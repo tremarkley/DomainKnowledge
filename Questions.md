@@ -12,3 +12,5 @@ Singly-linked list | O(n) | O(n) | O(1)
 Hash table | O(1) | O(1) | O(1)
 BST | O(log(n)) | O(log(n)) | O(log(n))
 
+### When using git, what exactly do people mean when they talk about "the SHA-1"? How is that related to how git works?
+SHA-1 is a cryptographic hash algorithm which takes an input and produces a 160 bit (20-byte) hash value known as a message digest typically rendered as a hexadecimal 40 digits long. Git uses this algorithm when you make commits. It is used as a method of verification and identification. Git creates the checksum by using metadata of the commit as well as the commit itself (author, parent commit's checksum, and the checksum of the changes made in the commit). Then when you pull from a git repo git will check the checksums of the files you received against the ones on the server to make sure you didnt receive corrupt files.
