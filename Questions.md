@@ -123,3 +123,23 @@ const clone = (array) => {
   return result;
 }
 ```
+
+### From memory, write a code snippet that binary-searches an array. 
+```javascript
+const binarySearch = (array, target) => {
+  let leftIndex = 0;
+  let rightIndex = array.length - 1;
+  while (leftIndex <= rightIndex) {
+    const middleIndex = Math.floor((leftIndex + rightIndex)/2);
+    if (array[middleIndex] === target) {
+      return middleIndex
+    }
+    if (array[middleIndex] < target) {
+      leftIndex = middleIndex + 1;
+    } else {
+      rightIndex = middleIndex - 1;
+    }
+  }
+  return -1;
+}
+```
