@@ -87,3 +87,12 @@ An IIFE stands for an Immediately Invoke Function Expression. An IIFE protects a
 ```javascript
 const isPalindrome = (inputString) => inputString === inputString.split('').reverse().join('');
 ```
+
+### From memory, write the one-liner that generates a random number between two given integers.
+```javascript
+\\  last number not included 
+const randomNumber = (int1, int2) => Math.floor(Math.random()*(int2 - int1)) + int1;
+
+\\  last number included
+const randomNumber = (int1, int2) => Math.floor(Math.random()*(int2 - int1 + 1)) + int1;
+```
