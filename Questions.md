@@ -25,3 +25,43 @@ TDD stands for test driven development. The idea is that you will write all of t
 ### Is JavaScript a functional language? What does it mean for a language to be "functional"?
 Javascript is a multi-paradigm language. Although it is not widely known as a functional language it does have some functional elements. It can be written in imperative, prototype based object oriented, or functional. It's up to you to pick which one is best for your use case. Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids state and mutable data. It emphasizes the application of functions, in contrast to the imperative programming style, which emphasizes changes in state.
 
+### Practically speaking, what's a "declarative" language?
+
+**An imperative approach (HOW):** I see that table located under the Gone Fishin’ sign is empty. My husband and I are going to walk over there and sit down.
+
+**A declarative approach (WHAT):** Table for two, please.
+
+The imperative approach is concerned with HOW you’re actually going to get a seat. You need to list out the steps to be able to show HOW you’re going to get a table.The declarative approach is more concerned with WHAT you want, a table for two. It is important to realize that many declarative approaches have some sort of imperative abstraction layer. Look at the above example: The declarative response to the Red Lobster employee is assuming that the Red Lobster employee knows all the imperative steps to get us to the table.
+
+Popular declarative languages are SQL and HTML. Many (if not all) declarative approaches have some sort of underlying imperative abstraction.
+
+Example of difference between imperative and declarative languages:
+Imperative:
+
+* Start
+* Turn on your shoes size 9 1/2.
+* Make room in your pocket to keep an array[7] of keys.
+* Put the keys in the room for the keys in the pocket.
+* Enter garage.
+* Open garage.
+* Enter Car.
+... and so on and on ...
+
+* Put the milk in the refrigerator.
+* Stop.
+
+Declarative, whereof functional is a subcategory:
+
+* Milk is a healthy drink, unless you have problems digesting lactose.
+* Usually, one stores milk in a refrigerator.
+* A refrigerator is a box that keeps the things in it cool.
+* A store is a place where items are sold.
+* By "selling" we mean the exchange of things for money.
+* Also, the exchange of money for things is called "buying".
+... and so on and on ...
+
+* Make sure we have milk in the refrigerator (when we need it - for lazy functional languages).
+
+[Reference](https://tylermcginnis.com/imperative-vs-declarative-programming/)
+
+
