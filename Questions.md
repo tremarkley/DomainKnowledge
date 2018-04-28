@@ -232,3 +232,14 @@ const postOrder = (node) => {
 }
 
 ```
+
+### What does it mean for coding to be "idiomatic"? Give one example of idiomatic vs non-idiomatic coding in JavaScript.
+Idiomatic code means using the unique parts of the language. This is similar to idioms in human languages. 
+
+```javascript
+\\  example of idiomatic way of checking if an array has anything in it
+if (array.length)
+
+\\  non-idiomatic
+if (array.length > 0)
+```
