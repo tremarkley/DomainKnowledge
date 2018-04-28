@@ -155,11 +155,11 @@ const DFS = (node) => {
     result.push(node.value);
   }
   if (node.left) {
-    result.push(BFS(node.left));
+    result.concat(DFS(node.left));
   }
   if (node.right) {
-    result.push(BFS(node.right));
+    result.concat(DFS(node.right));
   }
-  return rez
+  return result;
 }
 ```
