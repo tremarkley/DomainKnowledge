@@ -96,3 +96,15 @@ const randomNumber = (int1, int2) => Math.floor(Math.random()*(int2 - int1)) + i
 \\  last number included
 const randomNumber = (int1, int2) => Math.floor(Math.random()*(int2 - int1 + 1)) + int1;
 ```
+### From memory, write the short function to shuffle a deck of cards with complete randomness.
+```javascript
+const shuffle = (array) => {
+  for (let i = 0; i < array.length - 1; i += 1) {
+    const randomIndex = Math.floor(Math.random()*(array.length - i)) + i;
+    const temp = array[i];
+    array[i] = array[randomIndex];
+    array[randomIndex] = temp;
+  }
+  return array;
+}
+```
