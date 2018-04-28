@@ -246,3 +246,12 @@ for (let i = 0; i < array.length; i += 1) {
   result.push(array[i] * 2);
 }
 ```
+
+### There is overhead to sending a request to another machine over the network. Make a (simple) quantitative argument re why it's still often faster to fetch data from Redis vs not using it. *
+hint: Every web programmer should have the gist of this [table](https://gist.github.com/jboner/2841832) memorized
+
+It is often faster to fetch data from Redis rather than fetching it locally from disk provided that the other machines are in the same datacenter/network. If you look at the network stats in the link above the amount of time it takes to do a roundtrip around a data center is 20x faster than doing a seek from disk.
+
+For example let's do a comparison. Say we have an application that stores all user information on disk. A request comes in for a specific record, it then takes approximately 10 ms to find it on disk. 
+
+Now let's say we have a redis server on another machine. To get to and from the redis server it takes 500 us, then to read off of the redis server in the worst case we have to go to main memory and it takes 100 ns. Therefore, in total it takes approximately .500001 ms as opposed 10 ms to read from disk.
