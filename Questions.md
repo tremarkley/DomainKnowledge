@@ -150,15 +150,35 @@ const DFS = (node) => {
   if (!node) {
     return;
   }
-  const result = [];
+  let result = [];
   if (node !== null) {
     result.push(node.value);
   }
   if (node.left) {
-    result.concat(DFS(node.left));
+    result = result.concat(DFS(node.left));
   }
   if (node.right) {
-    result.concat(DFS(node.right));
+    result = result.concat(DFS(node.right));
+  }
+  return result;
+}
+
+const BFS = (node) => {
+  if (!node) {
+    return; 
+  }
+  const result = [];
+  const toVisit = new Queue();
+  toVisit.enqueue(node);
+  while (!toVisit.isEmpty()) {
+    const currentNode = toVisit.dequeue();
+    result.push(currentNode.value);
+    if (currentNode.left) {
+      toVisit.enqueue(currentNode.left);
+    }
+    if (currentNode.right) {
+      toVisit.enqueue(currentNode.right);
+    }
   }
   return result;
 }
