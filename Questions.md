@@ -108,3 +108,18 @@ const shuffle = (array) => {
   return array;
 }
 ```
+
+### From memory, write the shortest code snippet in JS for cloning an array.
+```javascript
+const clone = (array) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (Array.isArray(array[i])) {
+      result.push(clone(array[i]));
+    } else {
+      result.push(array[i]);
+    }
+  }
+  return result;
+}
+```
