@@ -17,3 +17,8 @@ SHA-1 is a cryptographic hash algorithm which takes an input and produces a 160 
 
 ### Practically speaking, how does git rebase function compared to git merge?
 So a typical scenario where you would rebase would be if you make some changes then submit a pull request. While waiting for that pull request to go through you make some more changes that get pushed to the master branch which conflict with the pull request. Therefore, you rebase the branch of the pull request to reset the base commit so that when your pull request is merged into the master branch your changes are clean and just include the changes you made. [helpful link](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+### Present a quick overview of TDD. What are the proposed benefits? How popular is it, really? What are the arguments against it?
+
+TDD stands for test driven development. The idea is that you will write all of the tests for a specific feature before you implement it. This forces you to really think out the inputs and outputs to the function. Additionally, by having tests in place you can check to make sure new features you implement dont break existing code. Downsides are that it can be time consuming, you dont always know your design up front and things change therefore you spend a lot of time tweaking or re-writing tests.
+
