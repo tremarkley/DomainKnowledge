@@ -143,3 +143,23 @@ const binarySearch = (array, target) => {
   return -1;
 }
 ```
+
+### From memory, write code snippets for BFS and DFS of a BST.
+```javascript
+const DFS = (node) => {
+  if (!node) {
+    return;
+  }
+  const result = [];
+  if (node !== null) {
+    result.push(node.value);
+  }
+  if (node.left) {
+    result.push(BFS(node.left));
+  }
+  if (node.right) {
+    result.push(BFS(node.right));
+  }
+  return rez
+}
+```
