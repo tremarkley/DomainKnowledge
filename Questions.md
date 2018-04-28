@@ -82,3 +82,8 @@ When creating a promise you have a resolve and a reject function. The resolve an
 
 ### What's an IIFE in JS? When would you use it?
 An IIFE stands for an Immediately Invoke Function Expression. An IIFE protects a modules scope from the environment in which it was placed. For example you have a for loop in which you pass the i into an IIFE then you use the i in an asynchronous function. Even though the i is changing on the outside in the for loop, the i does not change within the IIFE.
+
+### From memory, write the one-liner that determines if a given string is a palindrome.
+```javascript
+const isPalindrome = (inputString) => inputString === inputString.split('').reverse().join('');
+```
