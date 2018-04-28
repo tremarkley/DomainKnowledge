@@ -183,3 +183,52 @@ const BFS = (node) => {
   return result;
 }
 ```
+
+### From memory, write 3 code snippets that do: pre-order, in-order, and post-order traversal of a BST.
+```javascript
+const preOrder = (node) => {
+  if (!node) {
+    return;
+  }
+  let result = [];
+  result.push(node.value);
+  if (node.left) {
+    result = result.concat(preOrder(node.left));
+  }
+  if (node.right) {
+    result = result.concat(preOrder(node.right));
+  }
+  return result;
+}
+
+const inOrder = (node) => {
+  if (!node) {
+    return;
+  }
+  let result = [];
+  if (node.left) {
+    result = result.concat(preOrder(node.left));
+  }
+  result.push(node.value);
+  if (node.right) {
+    result = result.concat(preOrder(node.right));
+  }
+  return result;
+}
+
+const postOrder = (node) => {
+  if (!node) {
+    return;
+  }
+  let result = [];
+  if (node.left) {
+    result = result.concat(preOrder(node.left));
+  }
+  if (node.right) {
+    result = result.concat(preOrder(node.right));
+  }
+  result.push(node.value);
+  return result;
+}
+
+```
