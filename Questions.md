@@ -22,3 +22,6 @@ So a typical scenario where you would rebase would be if you make some changes t
 
 TDD stands for test driven development. The idea is that you will write all of the tests for a specific feature before you implement it. This forces you to really think out the inputs and outputs to the function. Additionally, by having tests in place you can check to make sure new features you implement dont break existing code. Downsides are that it can be time consuming, you dont always know your design up front and things change therefore you spend a lot of time tweaking or re-writing tests.
 
+### Is JavaScript a functional language? What does it mean for a language to be "functional"?
+Javascript is a multi-paradigm language. Although it is not widely known as a functional language it does have some functional elements. It can be written in imperative, prototype based object oriented, or functional. It's up to you to pick which one is best for your use case. Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids state and mutable data. It emphasizes the application of functions, in contrast to the imperative programming style, which emphasizes changes in state.
+
