@@ -64,4 +64,7 @@ Declarative, whereof functional is a subcategory:
 
 [Reference](https://tylermcginnis.com/imperative-vs-declarative-programming/)
 
+### Is JavaScript statically or dynamically typed? Is JavaScript strongly typed or loosely typed? What do those terms mean?
+Javascript is dynamically typed. This means that types are determined at run time rather than at compile time. Loosely typed means that the language does not bother too much with types and does the conversions automatically i.e. you can add a string and an integer together. With a strongly typed language once a variable has a certain typed assigned to it, then it cannot be changed. 
+
 
